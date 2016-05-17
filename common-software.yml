@@ -39,7 +39,7 @@
     - block:
       - name: Add virtualbox key
         apt_key:
-          url: https://www.virtualbox.org/download/oracle_vbox.asc
+          url: '{{ virtualbox_key }}'
           state: present
         become: yes
 
@@ -72,7 +72,7 @@
           state: present
         when: vagrant_version not in vagrant_check_install.stdout
         become: yes
-        
+
       - name: Remove vagrant deb package
         file:
           path: '/tmp/vagrant.deb'
