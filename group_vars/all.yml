@@ -4,20 +4,22 @@ virtualbox_release_version: virtualbox-5.0
 
 # vagrant
 vagrant_version: 1.8.1
-vagrant_deb_package_url: 'https://releases.hashicorp.com/vagrant/{{ vagrant_version }}/vagrant_{{ vagrant_version }}_x86_64.deb'
 
 username: VTerdunov
 email: v.v.terdunov@cit.rkomi.ru
 
 # list of deb packages
 development_deb_packages:
+  - git
+  - git-flow
   - curl
   - python-apt
   - python-pycurl
   - python-dev
   - python-setuptools
+  - python3
+  - python3-venv
   - shellcheck
-  - git-flow
 
 common_deb_packages:
   - undistract-me
@@ -26,9 +28,10 @@ common_deb_packages:
   - numix-icon-theme-circle
   - google-chrome-stable
 
-pip_linters:
+pip_packages:
   - pylint
   - ansible-lint
+  - molecule
 
 ruby_gems:
   - bundler
@@ -51,3 +54,10 @@ git_configs:
   - 'git config --global user.email {{ email }}'
   - 'git config --global push.default simple'
   - "git config --global core.editor '/usr/bin/subl -t -w'"
+
+rbenv:
+  env: user
+  version: v1.0.0
+  ruby_version: 2.3.0
+
+rbenv_users: ['vterdunov']

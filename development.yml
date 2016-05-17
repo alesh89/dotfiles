@@ -20,12 +20,12 @@
           name: pip
           state: latest
 
-      - name: Install linters from pip
+      - name: Install packages from pip
         pip:
           name: '{{ item }}'
           state: latest
         with_items:
-          - '{{ pip_linters }}'
+          - '{{ pip_packages }}'
       become: yes
       tags: always
 
