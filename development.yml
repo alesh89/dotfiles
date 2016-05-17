@@ -41,7 +41,7 @@
         gem:
           name: '{{ item }}'
           state: latest
-          user_install: no
+          user_install: yes
         # become: yes # no for rbenv
         ignore_errors: yes
         with_items:

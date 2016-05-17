@@ -6,8 +6,8 @@ virtualbox_release_version: virtualbox-5.0
 vagrant_version: 1.8.1
 vagrant_deb_package_url: 'https://releases.hashicorp.com/vagrant/{{ vagrant_version }}/vagrant_{{ vagrant_version }}_x86_64.deb'
 
-username: user
-email: test@email.com
+username: VTerdunov
+email: v.v.terdunov@cit.rkomi.ru
 
 # list of deb packages
 development_deb_packages:
@@ -37,7 +37,7 @@ ruby_gems:
   - ruby-lint
   - sqlint
   - rubocop
-  
+
 ppa:
   - 'ppa:webupd8team/sublime-text-3'
   - 'ppa:ricotz/docky'
