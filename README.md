@@ -4,7 +4,7 @@
 ###### Требуется установленный git:
 ```
 git clone https://github.com/vterdunov/ansible-apt.git
-make ansible
+make prepare
 ```
 
 ### Общее ПО (VirtualBox, Vagrant, etc)
