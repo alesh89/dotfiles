@@ -1,4 +1,0 @@
----
-vagrant_deb_package_url: 'https://releases.hashicorp.com/vagrant/{{ vagrant_version }}/vagrant_{{ vagrant_version }}_x86_64.deb'
-virtualbox_key: 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
-sublime_text_ppa: 'ppa:webupd8team/sublime-text-3'

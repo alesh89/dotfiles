@@ -1,12 +1,14 @@
 ---
 # virtualbox
 virtualbox_release_version: virtualbox-5.0
+virtualbox_key: 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
 
 # vagrant
 vagrant_version: 1.8.1
+vagrant_deb_package_url: 'https://releases.hashicorp.com/vagrant/{{ vagrant_version }}/vagrant_{{ vagrant_version }}_x86_64.deb'
 
 username: VTerdunov
-email: v.v.terdunov@cit.rkomi.ru
+email: vterdunov@open-sys.org
 
 # list of deb packages
 development_deb_packages:
@@ -46,7 +48,7 @@ ppa:
   - 'ppa:numix/ppa'
   - 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
   - 'deb http://ppa.launchpad.net/kilian/f.lux/ubuntu trusty main'
-  - 'deb http://download.virtualbox.org/virtualbox/debian wily contrib'
+  - 'deb http://download.virtualbox.org/virtualbox/debian xenial contrib'
 
 git_configs:
   - 'git config --global user.name {{ username }}'
@@ -57,10 +59,11 @@ git_configs:
 rbenv:
   env: user
   version: v1.0.0
-  ruby_version: 2.3.0
+  ruby_version: 2.3.1
 
 rbenv_users: ['vterdunov']
 
+sublime_text_ppa: 'ppa:webupd8team/sublime-text-3'
 sublime_packages_url_list:
   - { url: 'https://github.com/SublimeGit/SublimeGit.git', name: 'SublimeGit' }
   - { url: 'https://github.com/facelessuser/BracketHighlighter.git', name: 'BracketHighlighter'}

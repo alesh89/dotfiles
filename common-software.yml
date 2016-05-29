@@ -11,15 +11,6 @@
         - '{{ ppa }}'
       become: yes
 
-    - name: Install sublime text 3
-      apt:
-        name: sublime-text-installer
-        update_cache: yes
-        state: latest
-      become: yes
-      tags:
-        - text
-
     - block:
       - name: Install f.lux key
         apt_key:
@@ -32,6 +23,7 @@
           name: fluxgui
           update_cache: yes
           state: latest
+        ignore_errors: yes
       become: yes
       tags:
         - flux
@@ -94,3 +86,4 @@
       become: yes
       with_items:
         - '{{ common_deb_packages }}'
+      ignore_errors: yes
