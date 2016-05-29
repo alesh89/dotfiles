@@ -1,6 +1,6 @@
 ### Установка
 ###### Без использования git:
-[Скачайте](https://github.com/vterdunov/ansible-apt/archive/master.zip) репозиторий в виде архива и распакуйте.
+[Скачайте](https://github.com/vterdunov/dotfiles/archive/master.zip) репозиторий в виде архива и распакуйте.
 ###### Требуется установленный git:
 ```
 git clone https://github.com/vterdunov/ansible-apt.git
