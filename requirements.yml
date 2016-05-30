@@ -1,2 +1,5 @@
 - src: https://github.com/zzet/ansible-rbenv-role
   name: rbenv
+
+- src: https://github.com/angstwad/docker.ubuntu
+  name: docker

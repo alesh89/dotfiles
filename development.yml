@@ -62,3 +62,4 @@
 
   roles:
     - { role: rbenv, tags: ruby, become: yes }
+    - { role: docker, tags: docker, become: yes }
