@@ -50,7 +50,10 @@
       tags: ruby
 
     - name: Set git configuration
-      shell: "{{ item }}"
+      git_config:
+        scope: global
+        name: '{{ item.name }}'
+        value: '{{ item.value }}'
       with_items:
         - '{{ git_configs }}'
       tags: always

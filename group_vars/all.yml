@@ -4,11 +4,11 @@ virtualbox_release_version: virtualbox-5.0
 virtualbox_key: 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
 
 # vagrant
-vagrant_version: 1.8.1
+vagrant_version: 1.8.3
 vagrant_deb_package_url: 'https://releases.hashicorp.com/vagrant/{{ vagrant_version }}/vagrant_{{ vagrant_version }}_x86_64.deb'
 
 username: VTerdunov
-email: vterdunov@open-sys.org
+email: mail2slick@gmail.com
 
 # list of deb packages
 development_deb_packages:
@@ -51,10 +51,11 @@ ppa:
   - 'deb http://download.virtualbox.org/virtualbox/debian xenial contrib'
 
 git_configs:
-  - 'git config --global user.name {{ username }}'
-  - 'git config --global user.email {{ email }}'
-  - 'git config --global push.default simple'
-  - "git config --global core.editor '/usr/bin/subl -t -w'"
+  - { name: user.name, value: '{{ username }}' }
+  - { name: user.email, value: '{{ email }}' }
+  - { name: push.default, value: simple }
+  - { name: core.editor, value: '/usr/bin/subl -t -w' }
+  - { name: alias.lg, value: "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit" }
 
 rbenv:
   env: user
