@@ -7,23 +7,39 @@
         "gutter_theme_excludes": [],
         "lint_mode": "background",
         "linters": {
+            "json": {
+                "@disable": false,
+                "args": [],
+                "excludes": [],
+                "strict": true
+            },
+            "pylint": {
+                "@disable": false,
+                "args": [],
+                "disable": "",
+                "enable": "",
+                "excludes": [],
+                "paths": [],
+                "rcfile": "",
+                "show-codes": false
+            },
             "rubocop": {
                 "@disable": false,
-                "args": [
-                    "--config",
-                    "${home}/.rubocop.yml"
-                ],
+                "args": [],
+                "excludes": []
+            },
+            "shellcheck": {
+                "@disable": false,
+                "args": [],
+                "exclude": "",
                 "excludes": []
             }
         },
-        "mark_style": "fill",
+        "mark_style": "squiggly underline",
         "no_column_highlights_line": false,
         "passive_warnings": false,
         "paths": {
-            "linux": [
-                "~/.rbenv/shims/",
-                "/usr/bin/"
-            ],
+            "linux": [],
             "osx": [],
             "windows": []
         },

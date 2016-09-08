@@ -3,14 +3,17 @@
   "default_encoding": "UTF-8",
   "default_line_ending": "unix",
   "ensure_newline_at_eof_on_save": true,
-  "font_size": 11,
+  "font_size": 13,
   "highlight_modified_tabs": true,
   "ignored_packages":
   [
     "Vintage"
   ],
-  "show_encoding": true,
   "tab_size": 2,
+  "trailing_spaces_syntax_ignore":
+  [
+    "md"
+  ],
   "translate_tabs_to_spaces": true,
   "trim_trailing_white_space_on_save": true
 }

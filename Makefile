@@ -10,7 +10,7 @@ common-software:
 TAGS := always
 development:
 	ansible-galaxy install --force -r requirements.yml
-	ansible-playbook development.yml -i local --ask-sudo-pass --tags $(TAGS) -vv
+	ansible-playbook development.yml -i local --ask-sudo-pass --tags $(TAGS) -v
 
 dotfiles:
 	ansible-playbook dotfiles.yml -i local --ask-sudo-pass

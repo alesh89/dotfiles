@@ -27,17 +27,11 @@
     url: https://packagecontrol.io/Package%20Control.sublime-package
     dest: ~/.config/sublime-text-3/Installed Packages/Package Control.sublime-package
 
-- name: Check sublime settings is provided
-  stat:
-    path: ../files/Preferences.sublime-settings
-  register: sublime_settings
-
 - name: Copy sublime settings
   copy:
-    src: ../files/Preferences.sublime-settings
+    src: Preferences.sublime-settings
     dest: ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
     force: no
-  when: sublime_settings.stat.exists
 
 - name: Install packages for Sublime
   git:
@@ -53,24 +47,24 @@
 
 - name: Check .rubocop.yml is provided
   stat:
-    path: ../files/.rubocop.yml
+    path: '{{ playbook_dir }}/files/.rubocop.yml'
   register: rubocopyml
 
 - name: Copy .rubocop.yml
   copy:
-    src: ../files/.rubocop.yml
+    src: '.rubocop.yml'
     dest: ~/.rubocop.yml
   when: rubocop_package.stat.isdir and rubocopyml.stat.exists
 
 - name: Check sublime-linter-rubocop settings is provided
   stat:
-    path: ../files/SublimeLinter.sublime-settings
+    path: '{{ playbook_dir }}/files/SublimeLinter.sublime-settings'
   register: rubocop_settings
   when: rubocop_package.stat.isdir
 
 - name: Copy sublime-linter-rubocop settings
   copy:
-    src: ../files/SublimeLinter.sublime-settings
+    src: 'SublimeLinter.sublime-settings'
     dest: ~/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings
     force: yes
   when: rubocop_package.stat.isdir and rubocop_settings.stat.exists
@@ -82,24 +76,24 @@
 
 - name: Check sublimegit settings is provided
   stat:
-    path: ../files/SublimeGit.sublime-settings
+    path: '{{ playbook_dir }}/files/SublimeGit.sublime-settings'
   register: sublimegit_settings
 
 - name: Copy sublimegit settings
   copy:
-    src: ../files/SublimeGit.sublime-settings
+    src: 'SublimeGit.sublime-settings'
     dest: ~/.config/sublime-text-3/Packages/User/SublimeGit.sublime-settings
     force: yes
   when: sublimegit_package.stat.isdir and sublimegit_settings.stat.exists
 
 - name: Check keybindings is provided
   stat:
-    path: '../files/Default (Linux).sublime-keymap'
+    path: '{{ playbook_dir }}/files/Default (Linux).sublime-keymap'
   register: sublimegit_settings
 
 - name: Copy keybindings
   copy:
-    src: '../files/Default (Linux).sublime-keymap'
+    src: 'Default (Linux).sublime-keymap'
     dest: ~/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap
     force: yes
   when: sublimegit_package.stat.isdir and sublimegit_settings.stat.exists

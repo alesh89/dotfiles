@@ -4,10 +4,10 @@ virtualbox_release_version: virtualbox-5.0
 virtualbox_key: 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
 
 # vagrant
-vagrant_version: 1.8.3
+vagrant_version: 1.8.5
 vagrant_deb_package_url: 'https://releases.hashicorp.com/vagrant/{{ vagrant_version }}/vagrant_{{ vagrant_version }}_x86_64.deb'
 
-username: VTerdunov
+username: vterdunov
 email: mail2slick@gmail.com
 
 # list of deb packages
@@ -47,8 +47,8 @@ ppa:
   - 'ppa:ricotz/docky'
   - 'ppa:numix/ppa'
   - 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
-  - 'deb http://ppa.launchpad.net/kilian/f.lux/ubuntu trusty main'
   - 'deb http://download.virtualbox.org/virtualbox/debian xenial contrib'
+  # - 'deb http://ppa.launchpad.net/kilian/f.lux/ubuntu trusty main'
 
 git_configs:
   - { name: user.name, value: '{{ username }}' }
@@ -62,7 +62,8 @@ rbenv:
   version: v1.0.0
   ruby_version: 2.3.1
 
-rbenv_users: ['vterdunov']
+rbenv_users:
+  - '{{ username }}'
 
 sublime_text_ppa: 'ppa:webupd8team/sublime-text-3'
 sublime_packages_url_list:

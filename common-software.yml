@@ -11,22 +11,22 @@
         - '{{ ppa }}'
       become: yes
 
-    - block:
-      - name: Install f.lux key
-        apt_key:
-          keyserver: keyserver.ubuntu.com
-          id: FAEB83059BD4ED25
-          state: present
+    # - block:
+    #   - name: Install f.lux key
+    #     apt_key:
+    #       keyserver: keyserver.ubuntu.com
+    #       id: FAEB83059BD4ED25
+    #       state: present
 
-      - name: Install f.lux
-        apt:
-          name: fluxgui
-          update_cache: yes
-          state: latest
-        ignore_errors: yes
-      become: yes
-      tags:
-        - flux
+    #   - name: Install f.lux
+    #     apt:
+    #       name: fluxgui
+    #       update_cache: yes
+    #       state: latest
+    #     ignore_errors: yes
+    #   become: yes
+    #   tags:
+    #     - flux
 
     - block:
       - name: Add virtualbox key
