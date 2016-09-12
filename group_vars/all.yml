@@ -1,6 +1,6 @@
 ---
 # virtualbox
-virtualbox_release_version: virtualbox-5.0
+virtualbox_release_version: virtualbox-5.1
 virtualbox_key: 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
 
 # vagrant
@@ -29,6 +29,7 @@ common_deb_packages:
   - numix-gtk-theme
   - numix-icon-theme-circle
   - google-chrome-stable
+  - htop
 
 pip_packages:
   - pylint
@@ -55,7 +56,7 @@ git_configs:
   - { name: user.email, value: '{{ email }}' }
   - { name: push.default, value: simple }
   - { name: core.editor, value: '/usr/bin/subl -t -w' }
-  - { name: alias.lg, value: "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit" }
+  # - { name: alias.lg, value: "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit" }
 
 rbenv:
   env: user
