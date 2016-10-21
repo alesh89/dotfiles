@@ -4,7 +4,7 @@ virtualbox_release_version: virtualbox-5.1
 virtualbox_key: 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
 
 # vagrant
-vagrant_version: 1.8.5
+vagrant_version: 1.8.6
 vagrant_deb_package_url: 'https://releases.hashicorp.com/vagrant/{{ vagrant_version }}/vagrant_{{ vagrant_version }}_x86_64.deb'
 
 username: vterdunov
