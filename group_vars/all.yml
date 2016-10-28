@@ -30,6 +30,7 @@ common_deb_packages:
   - numix-icon-theme-circle
   - google-chrome-stable
   - htop
+  - fluxgui
 
 pip_packages:
   - pylint
@@ -49,7 +50,7 @@ ppa:
   - 'ppa:numix/ppa'
   - 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
   - 'deb http://download.virtualbox.org/virtualbox/debian xenial contrib'
-  # - 'deb http://ppa.launchpad.net/kilian/f.lux/ubuntu trusty main'
+  - 'ppa:nathan-renniewaldock/flux'
 
 git_configs:
   - { name: user.name, value: '{{ username }}' }
