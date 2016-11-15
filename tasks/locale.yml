@@ -1,4 +1,4 @@
-- name: Install debconf-utils
+- name: Install required packages
   apt:
     name: "{{ item }}"
     state: latest
