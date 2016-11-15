@@ -7,8 +7,8 @@ virtualbox_key: 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
 vagrant_version: 1.8.6
 vagrant_deb_package_url: 'https://releases.hashicorp.com/vagrant/{{ vagrant_version }}/vagrant_{{ vagrant_version }}_x86_64.deb'
 
-username: vterdunov
-email: mail2slick@gmail.com
+username: 'Aleksei Tiufiakov'
+email: feksai.at@gmail.com
 
 # list of deb packages
 development_deb_packages:
