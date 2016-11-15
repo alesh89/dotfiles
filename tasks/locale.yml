@@ -1,0 +1,24 @@
+- name: Install debconf-utils
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - debconf
+    - debconf-utils
+
+- name: Generate locales
+  locale_gen:
+    name: en_US.UTF-8
+    state: present
+
+- name: Set default locale to en_US.UTF-8
+  debconf: name=locales question='locales/default_environment_locale' value=en_US.UTF-8 vtype='select'
+
+- name: Set to generate locales
+  debconf: name=locales question='locales/locales_to_be_generated'  value='en_US.UTF-8 UTF-8' vtype='multiselect'
+
+- name: Reconfigure locales
+  shell: dpkg-reconfigure --frontend noninteractive locales
+
+- name: Set default locale vars | Fill /etc/default/locale
+  shell: update-locale LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8

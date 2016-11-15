@@ -2,6 +2,9 @@
 - hosts: all
 
   tasks:
+    - include: tasks/locale.yml
+      become: yes
+
     - name: Add PPA sources
       apt_repository:
         repo: '{{ item }}'
