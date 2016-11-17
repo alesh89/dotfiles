@@ -60,7 +60,8 @@ git_configs:
   - { name: push.default, value: simple }
   - { name: core.editor, value: '/usr/bin/subl -t -w' }
   - { name: diff.tool, value: 'meld' }
-  # - { name: alias.lg, value: "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit" }
+  - { name: alias.lg, value: "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit" }
+
 
 rbenv:
   env: user
