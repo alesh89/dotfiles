@@ -31,6 +31,7 @@ common_deb_packages:
   - numix-gtk-theme
   - numix-icon-theme-circle
   - google-chrome-stable
+  - yandex-browser-beta
   - htop
 
 pip_packages:
@@ -51,6 +52,7 @@ ppa:
   - 'ppa:numix/ppa'
   - 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
   - 'deb http://download.virtualbox.org/virtualbox/debian xenial contrib'
+  - 'deb [arch=amd64] http://repo.yandex.ru/yandex-browser/deb beta main'
 
 git_configs:
   - { name: user.name, value: '{{ full_name }}' }

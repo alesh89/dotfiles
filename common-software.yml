@@ -65,6 +65,12 @@
         state: present
       become: yes
 
+    - name: Add yandex-browser-beta key
+      apt_key:
+        url: https://repo.yandex.ru/yandex-browser/YANDEX-BROWSER-KEY.GPG
+        state: present
+      become: yes
+
     - name: Install common deb packages
       apt:
         name: '{{ item }}'
