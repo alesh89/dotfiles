@@ -61,7 +61,7 @@
 
     - name: Add google-chrome key
       apt_key:
-        url: https://dl.google.com/linux/linux_signing_key.pub
+        url: https://dl-ssl.google.com/linux/linux_signing_key.pub
         state: present
       become: yes
 
@@ -69,6 +69,7 @@
       apt:
         name: '{{ item }}'
         state: present
+        allow_unauthenticated: yes
       become: yes
       with_items:
         - '{{ common_deb_packages }}'
