@@ -23,6 +23,7 @@ development_deb_packages:
   - python-setuptools
   - python3
   - python3-venv
+  - libssl-dev
   - shellcheck
 
 common_deb_packages:
