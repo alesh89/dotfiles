@@ -34,6 +34,8 @@ common_deb_packages:
   - google-chrome-stable
   - yandex-browser-beta
   - htop
+  - ncdu
+  - mc
 
 pip_packages:
   - pylint
@@ -80,3 +82,6 @@ sublime_packages_url_list:
   - { url: 'https://github.com/SublimeLinter/SublimeLinter-rubocop.git', name: 'SublimeLinter-rubocop'}
   - { url: 'https://github.com/Zeeker/sublime-GitConflictResolver.git', name: 'GitConflictResolver'}
   - { url: 'https://github.com/sindresorhus/editorconfig-sublime.git', name: 'EditorConfig'}
+  - { url: 'https://github.com/alek-sys/sublimetext_indentxml.git', name: 'Indent XML'}
+  - { url: 'https://github.com/jisaacks/GitGutter.git', name: 'GitGutter'}
+  - { url: 'https://github.com/asbjornenge/Docker.tmbundle.git', name: 'Dockerfile Syntax Highlighting'}
