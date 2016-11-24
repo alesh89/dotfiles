@@ -13,4 +13,4 @@ development:
 	ansible-playbook development.yml -i local --ask-sudo-pass --tags $(TAGS) -v
 
 dotfiles:
-	ansible-playbook dotfiles.yml -i local --ask-sudo-pass
+	ansible-playbook dotfiles.yml -i local

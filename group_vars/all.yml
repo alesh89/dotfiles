@@ -7,8 +7,16 @@ virtualbox_key: 'https://www.virtualbox.org/download/oracle_vbox_2016.asc'
 vagrant_version: 1.8.6
 vagrant_deb_package_url: 'https://releases.hashicorp.com/vagrant/{{ vagrant_version }}/vagrant_{{ vagrant_version }}_x86_64.deb'
 
-username: vterdunov
-email: mail2slick@gmail.com
+full_name: 'Aleksei Tiufiakov'
+username: feksai
+email: feksai.at@gmail.com
+
+docker_opts: >
+  --bip=192.168.252.1/22
+  -H unix:///var/run/docker.sock
+
+docker_group_members:
+  - '{{ username }}'
 
 # list of deb packages
 development_deb_packages:
@@ -22,6 +30,7 @@ development_deb_packages:
   - python-setuptools
   - python3
   - python3-venv
+  - libssl-dev
   - shellcheck
 
 common_deb_packages:
@@ -30,8 +39,10 @@ common_deb_packages:
   - numix-gtk-theme
   - numix-icon-theme-circle
   - google-chrome-stable
+  - yandex-browser-beta
   - htop
-  - fluxgui
+  - ncdu
+  - mc
 
 pip_packages:
   - pylint
@@ -51,15 +62,16 @@ ppa:
   - 'ppa:numix/ppa'
   - 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
   - 'deb http://download.virtualbox.org/virtualbox/debian xenial contrib'
-  - 'ppa:nathan-renniewaldock/flux'
+  - 'deb [arch=amd64] http://repo.yandex.ru/yandex-browser/deb beta main'
 
 git_configs:
-  - { name: user.name, value: '{{ username }}' }
+  - { name: user.name, value: '{{ full_name }}' }
   - { name: user.email, value: '{{ email }}' }
   - { name: push.default, value: simple }
   - { name: core.editor, value: '/usr/bin/subl -t -w' }
   - { name: diff.tool, value: 'meld' }
-  # - { name: alias.lg, value: "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit" }
+  - { name: alias.lg, value: "log --color --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset\" --abbrev-commit" }
+
 
 rbenv:
   env: user
@@ -77,3 +89,6 @@ sublime_packages_url_list:
   - { url: 'https://github.com/SublimeLinter/SublimeLinter-rubocop.git', name: 'SublimeLinter-rubocop'}
   - { url: 'https://github.com/Zeeker/sublime-GitConflictResolver.git', name: 'GitConflictResolver'}
   - { url: 'https://github.com/sindresorhus/editorconfig-sublime.git', name: 'EditorConfig'}
+  - { url: 'https://github.com/alek-sys/sublimetext_indentxml.git', name: 'Indent XML'}
+  - { url: 'https://github.com/jisaacks/GitGutter.git', name: 'GitGutter'}
+  - { url: 'https://github.com/asbjornenge/Docker.tmbundle.git', name: 'Dockerfile Syntax Highlighting'}
