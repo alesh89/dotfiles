@@ -11,6 +11,13 @@ full_name: 'Aleksei Tiufiakov'
 username: feksai
 email: feksai.at@gmail.com
 
+docker_opts: >
+  --bip=192.168.252.1/22
+  -H unix:///var/run/docker.sock
+
+docker_group_members:
+  - '{{ username }}'
+
 # list of deb packages
 development_deb_packages:
   - curl
