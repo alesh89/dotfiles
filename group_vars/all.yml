@@ -34,6 +34,9 @@ development_deb_packages:
   - shellcheck
 
 common_deb_packages:
+  - exfat-fuse
+  - exfat-utils
+  - gnome-disk-utility
   - undistract-me
   - google-chrome-stable
   - yandex-browser-beta
