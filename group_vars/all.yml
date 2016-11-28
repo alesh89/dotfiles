@@ -35,9 +35,6 @@ development_deb_packages:
 
 common_deb_packages:
   - undistract-me
-  - plank
-  - numix-gtk-theme
-  - numix-icon-theme-circle
   - google-chrome-stable
   - yandex-browser-beta
   - htop
@@ -58,8 +55,6 @@ ruby_gems:
   - rubocop
 
 ppa:
-  - 'ppa:ricotz/docky'
-  - 'ppa:numix/ppa'
   - 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
   - 'deb http://download.virtualbox.org/virtualbox/debian xenial contrib'
   - 'deb [arch=amd64] http://repo.yandex.ru/yandex-browser/deb beta main'
